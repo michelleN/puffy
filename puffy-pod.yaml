@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: puffypod
+spec:
+  containers:
+  - name: puffy
+    image: mnoorali/puffy:1.0.0
+    ports:
+      - containerPort: 8080
