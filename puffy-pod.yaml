@@ -6,5 +6,11 @@ spec:
   containers:
   - name: puffy
     image: mnoorali/puffy:1.0.0
+    livenessProbe:
+      httpGet:
+          path: /healthz
+          port: 8080
+      initialDelaySeconds: 5
+      timeoutSeconds: 1
     ports:
       - containerPort: 8080
