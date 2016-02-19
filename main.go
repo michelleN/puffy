@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 )
@@ -11,6 +12,7 @@ func indexHandler(res http.ResponseWriter, req *http.Request) {
 
 func healthHandler(res http.ResponseWriter, req *http.Request) {
 	io.WriteString(res, "Don't worry. Puffy is fine!\n")
+	fmt.Println("A health check was performed")
 }
 
 func main() {

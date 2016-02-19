@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: puffy
-    image: mnoorali/puffy:1.0.0
+    image: mnoorali/puffy:2.0.1
     livenessProbe:
       httpGet:
           path: /healthz
